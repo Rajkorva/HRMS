@@ -7,7 +7,7 @@ Dynamic Frontend Developer with 1+ years of experience in React.js and Angular. 
 ---
 
 ### 🛠️ **Tech Stack:**
-- **Frameworks:** React.js, Angular, PrimeNG, Angulat Material
+- **Frameworks:** React.js, Angular, PrimeNG, Angular Material
 - **Languages:** Java, JavaScript, C, TypeScript
 - **Technologies:** HTML, CSS, Bootstrap, Redux
 
