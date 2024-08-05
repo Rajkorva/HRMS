@@ -29,7 +29,9 @@ Dynamic Frontend Developer with 1+ years of experience in React.js and Angular. 
 
 ### 🔗 **Connect with Me:**
 - **Email:** [korvarajkumar0937@gmail.com](mailto:korvarajkumar0937@gmail.com)
-- **LinkedIn:** [www.linkedin.com/in/korva-rajkumar-140647227](www.linkedin.com/in/korva-rajkumar-140647227)
+- **LinkedIn:** www.linkedin.com/in/
+korva-rajkumar-140647227
+
 - **Twitter:** [@korvarajkumar](https://twitter.com/korvarajkumar)
 
 ---
