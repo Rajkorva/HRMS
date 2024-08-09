@@ -1,0 +1,4360 @@
+/*Loginpage*/
+/* Root Variables for Theming */
+:root {
+  --primary-bg-color: #122270;
+  --secondary-bg-color: #d32f2f;
+  --text-color: #333;
+  --light-text-color: #fff;
+  --input-border-color: #ccc;
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  --button-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  color: var(--text-color);
+}
+
+/* Header Section */
+.headersection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 560px;
+  color: var(--text-color);
+  background-image: url("https://i.pinimg.com/originals/c8/21/e6/c821e6f6a409765d5b593ec84eb06cc8.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50px;
+  box-sizing: border-box;
+  
+}
+
+.headersection .left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  
+}
+
+.headersection .title {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Chalkduster, fantasy";
+  color: black;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
+}
+
+.idd {
+  width: 500px;
+  border: 1px solid var(--primary-bg-color);
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.idd1 {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+.idd1 h2 {
+  color: black;
+  margin-bottom: 20px;
+}
+
+/* Input Container */
+.input-container {
+  position: relative;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.input-container .icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary-bg-color);
+  font-size: 20px;
+}
+
+.input-container input[type="text"],
+.input-container input[type="password"] {
+  width: 100%;
+  padding: 12px 40px 12px 40px;
+  border: 1px solid var(--input-border-color);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.input-container input[type="text"]:focus,
+.input-container input[type="password"]:focus {
+  outline: none;
+  border-color: var(--primary-bg-color);
+  box-shadow: 0 0 5px rgba(18, 34, 112, 0.5);
+}
+
+/* Button Styling */
+.idd2 {
+  width: 100%;
+  background-color: var(--primary-bg-color);
+  color: var(--light-text-color);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: var(--button-shadow);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.idd2:hover {
+  background-color: var(--secondary-bg-color);
+  transform: translateY(-2px);
+}
+
+/* Remember Me Checkbox */
+.input-containers {
+  display: flex;
+  align-items: start;
+  margin-top: 5px;
+  
+  justify-content: inherit;
+  color: var(--text-color);
+}
+
+.input-containers input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Container for additional links */
+.container {
+  background-color: transparent;
+  padding: 16px;
+  text-align: center;
+}
+
+.contactbtn {
+  width: auto;
+  padding: 7px 15px;
+  background-color: var(--primary-bg-color);
+  color: var(--light-text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 40px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.contactbtn:hover {
+  background-color: var(--secondary-bg-color);
+  transform: translateY(-2px);
+}
+
+.psw {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.psw a {
+  text-decoration: none;
+  color: var(--primary-bg-color);
+  transition: color 0.3s;
+}
+
+.psw a:hover {
+  color: var(--secondary-bg-color);
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+  .idd {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .idd1 {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .input-container input[type="text"],
+  .input-container input[type="password"] {
+    padding-left: 35px;
+  }
+}/* Define keyframes for advanced animations */
+@keyframes zoomInRotate {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotateX(-90deg);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2) rotateX(20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotateX(0);
+  }
+}
+
+@keyframes flipIn {
+  0% {
+    opacity: 0;
+    transform: perspective(600px) rotateY(-90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(600px) rotateY(0);
+  }
+}
+
+/* Apply animations to elements */
+.title h1 {
+  animation: zoomInRotate 2s ease-out forwards;
+  transform-origin: center bottom;
+}
+
+.title h6 {
+  animation: flipIn 2s ease-out forwards;
+  transform-origin: left center;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+  }
+  /* dashboard.css */
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 514.5px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+  
+}
+
+.welcome-message {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.welcome-text {
+  text-align: center;
+  margin-top: 20px;
+  animation: slideInUp 0.8s ease;
+ 
+}
+
+.welcome-dashboard {
+  background-color: #f8f9fa;
+  padding: 40px;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease;
+  width: 73%;
+  margin-left: 240px;
+  margin-bottom: -10px;
+  margin-top: 30px;
+  height: 100%px;
+}
+
+.welcome-title {
+  color: #f3811d;
+  animation: slideInDown 0.8s ease;
+}
+
+
+.company-dashboard {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  line-height: 1.6;
+  animation: slideInLeft 1s ease;
+}
+
+.company-dashboard p {
+  margin-bottom: 16px;
+}
+
+/* Keyframe animations */
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 240px; /* Increased width to accommodate logos */
+  height: 100%;
+  background-color: #022139;
+  color: #fff;
+  overflow-y: auto;
+  padding-top: 60px;
+  align-items: center;
+}
+
+.sidebar-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #022139;
+  color: #fff;
+  cursor: pointer;  
+}
+/*}
+.sidebar :hover{ }*/
+.sidebar-menu {
+  padding: 30px;
+  justify-content: space-between; 
+  
+  
+}
+.sidebar-menu :hover{
+  background-color: none;
+  color: black;
+  background-position: relative;
+  border-radius: 3px; 
+}
+
+.menu-item {
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: initial;
+  font-size: 18px;
+  padding: 10px;
+  transition: all 0.3s ease;
+  
+}
+
+.menu-item i {
+  margin-right: 15px;
+}
+
+.menu-item:hover {
+  background-color: #ddd;
+  color: black;
+  border-radius: 5px;
+}
+
+.content {
+  margin-left: -250px; /* Adjusted to match sidebar width */
+  padding: 10px;
+  text-align: center;
+  padding: 14px 16px;
+}
+
+.topnavs {
+  background-color: #022139;
+  overflow: hidden;
+  width: 855px;
+  margin-right: 40px;
+  margin-top: -20px;
+  right: 120px;
+  position: absolute;
+  top: 20px;
+  right: -40px;
+  color: #fff;
+  border: none;
+  padding: 6px 20px;
+  cursor: pointer;
+}
+
+/* Style the links inside the navigation bar */
+.topnavs a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 40px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnavs a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+
+
+.logout-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 150px;
+}
+
+.logout-button:hover {
+  background-color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100px;
+  }
+
+  .content {
+    margin-left: 100px;
+  }
+}
+
+
+/* Global styles */
+/* General container styling */
+.ClientContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  width: 80%;
+  padding-top: 197.50px;
+  padding-bottom: 158px;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-image: url("https://img.freepik.com/premium-photo/business-people-city-mixed-media_391052-39600.jpg?w=1060");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.ClientContainer:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Keyframes for fadeIn animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Menu and submenu items styling */
+.menu-items {
+  cursor: pointer;
+  margin: 10px;
+  padding: 15px 25px;
+  border-radius: 10px;
+  background-color: #db450e;
+  width: 100%;
+  max-width: 400px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align text and icon to the left */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.submenu-items {
+  cursor: pointer;
+  margin: 10px;
+  padding: 15px 25px;
+  border-radius: 10px;
+  background-color: #12517a;
+  width: 100%;
+  max-width: 400px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align text and icon to the left */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+
+.menu-items:hover,
+.submenu-items:hover {
+  background-color: #0056b3;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.menu-items i,
+.submenu-items i {
+  margin-right: 15px; /* Space between icon and text */
+  font-size: 18px; /* Ensure icons are appropriately sized */
+}
+
+/* Client container inner div styling */
+.ClientContainer div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ClientContainer div div {
+  margin-bottom: 10px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+  .ClientContainer {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .menu-items,
+  .submenu-items {
+    width: 90%;
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
+
+/* Additional animations for menu items */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.menu-items,
+.submenu-items {
+  animation: slideIn 0.5s ease-in-out;
+}
+
+
+.ClientDetails {
+  background-color: rgba(255, 255, 255, 0.8); 
+  border: 2px solid #007bff5a; 
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  color:#000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  width: 600px;
+  
+}
+
+.ClientDetails h4 {
+  margin-bottom: 10px;
+}
+
+.ClientDetails table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.ClientDetails input[type="text"] {
+  width: calc(100% - 16px); 
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.ClientDetails button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff; 
+  color: #fff; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ClientDetails button[type="submit"]:hover {
+  background-color: #0056b3; 
+}
+
+/* Invoice.js */
+
+.invoice-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+input {
+  width: calc(50% - 10px);
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+/* InvoiceDetails Component Styling */
+.invoice-details {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid #f1f0f0; /* Updated border */
+  border-radius: 10px;
+  background-color: #f9f9f9; /* Updated background color */
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header h4 {
+  font-size: 24px;
+  color: #000; /* Updated font color */
+}
+
+.header img.logo {
+  max-height: 60px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Company Information Section Styling */
+.company-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+  width: 600px;
+}
+
+.company-info label {
+  font-weight: bold;
+  color: #000; /* Updated font color */
+  
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column; /* Change to row */
+  position: absolute;
+  top: 150px;
+  right: 160px;
+}
+
+.right-column > div {
+  display:ruby;
+  align-items: center;
+  margin: -5px; /* Remove margin */
+}
+
+.right-column label {
+  margin-right: 10px; /* Adjusted margin */
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+th, td {
+  border: 1px solid #000;
+  padding: 10px; /* Increased padding for better spacing */
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Details Table Styling */
+.details {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #6aabf6;
+  margin-left: 0px;
+  table-layout: fixed; /* Set the table layout to fixed */
+}
+
+.details th,
+.details td {
+  padding: 8px; /* Adjust padding as needed */
+  text-align: left; /* Adjust text alignment as needed */
+}
+
+.details th {
+   /* Adjust header background color */
+  color: rgb(13, 13, 13); /* Adjust header text color */
+}
+
+.details td {
+  border-bottom: 2px solid #ddd; /* Add bottom border for rows */
+}
+
+/* Equal width for each column */
+.details th,
+.details td {
+  width: 16.66%; /* 100% divided by the number of columns */
+}
+
+
+
+
+
+/* Totals Section Styling */
+.totals  {
+   border-top: 2px  solid black ;
+   border-radius: 1000px;
+   border-left: 2px solid black ;
+   border-right: 2px solid black ;
+   border-bottom: 2px solid black ;/* Add border around the container */
+   padding: 10px;
+   
+   margin-top: 50px; /* Add padding for spacing */
+}
+
+.totals {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 5px;
+  padding-bottom: 5px ;
+}
+
+
+
+.totals > div {
+  margin-right: -450px;
+}
+
+.totals p {
+  margin: 5px 0;
+  padding-left: 500px; /* Add padding to the left to align text */
+}
+
+.totals p:first-child {
+  font-weight: bold;
+  
+}
+
+/* Total Section Styling */
+.totals  {
+  font-weight: bold; /* Make the first paragraph (Total) bold */
+}
+/* Total Section Styling */
+.total {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border: 0.01px solid black;
+  border-radius: 400px;
+  
+   /* Simplify border declaration */
+  padding: 10px;
+}
+
+.total-bottom {
+  margin-right: -120px;
+  margin-top: -20px;
+}
+
+.total p {
+  margin: 5px 0px; /* Adjust paragraph margin */
+  margin-top: 10px;
+  margin-left: 230px;
+}
+
+.total p {
+  font-weight: bold; /* Make the first paragraph (AccountNumber) bold */
+}
+
+.total-bottom p {
+  margin-left: 140px; /* Add left margin to align text */
+}
+.totalr {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+  margin-top: 80px;
+  border: 1px solid #000;
+  padding: 10px;
+}
+.totalr-period{
+  margin-left: 20px;
+}
+
+.totalr-bottom {
+  margin-right: -80px;
+  margin-top: -20px;
+}
+
+.totalr p {
+  margin: 5px 0;
+  font-weight: bold; /* Make all paragraphs bold */
+}
+
+.totalr-bottom p {
+  margin-left: 160px;
+  margin-right: -80px;
+ /* Adjust left margin */
+  
+  margin-top: 25px;
+}
+
+.totalz-bottom p {
+  margin-left: 260px;
+  margin-right: -260px;
+  margin-bottom: -10px;
+}
+
+
+
+.notes p {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+  margin-top: 80px;
+  
+   /* Simplify border declaration */
+  padding: 10px;
+
+  margin: 5px 0;
+  font-size: 14px;
+  color: #000; 
+  display: flex;
+ 
+  align-items: center;/* Updated font color */
+  justify-content: flex-start;
+}
+
+/* Buttons Section Styling */
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.buttons button {
+  margin: 0 10px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: #0056b3;
+}
+.Thanks {
+  /* Background color */
+  padding: 20px; /* Padding around the content */
+  border-radius: 5px; /* Rounded corners */
+  margin-bottom: -160px;
+  margin-top: 80px;
+  margin-left: 80px;
+  font-weight: bold;/* Center-align text */
+  /* Box shadow for a subtle effect */
+}
+
+.Thanks p {
+  margin: 0; /* Remove default margin for <p> */
+  font-size: 18px; /* Font size for the paragraph */
+}
+/* App.css */
+
+.invoice-Detail {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.invoice-forms {
+  display: flex;
+  flex-direction: column;
+}
+
+.invoice-forms table {
+  width: 100%;
+}
+
+.invoice-forms td {
+  padding: 8px 0;
+}
+
+.invoice-forms input[type="text"],
+.invoice-forms select,
+.react-datepicker-wrapper input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.invoice-forms button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.invoice-forms button:hover {
+  background-color: #0056b3;
+}
+
+.invoice-forms button:active {
+  background-color: #004494;
+}
+
+
+
+
+/*Project.jsx*/
+.Project-container {
+  width: 80%;
+  margin: 50px 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-image: url("https://img1.wsimg.com/isteam/ip/08945638-42b1-40ec-83f6-9fbe45ef4360/Depositphotos_102535104_XL.jpg/:/cr=t:12.51%25,l:0%25,w:100%25,h:74.99%25/rs=w:1240,h:620,cg:true");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 800px;
+  
+}
+
+.Project-container h4 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* ProjectDetails.jsx */
+
+.ProjectDetails {
+  background-color: rgba(255, 255, 255, 0.908); 
+  border: 2px solid #007bff4c; 
+  border-radius: 10px;
+  padding: 20px;
+  color: #000;
+  
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+.ProjectDetails h5 {
+  margin-bottom: 10px;
+}
+
+.ProjectDetails table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.ProjectDetails input[type="text"] {
+  width: calc(100% - 16px); 
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.ProjectDetails button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff; 
+  color: #fff; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ProjectDetails button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.ProjectDetails table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.ProjectDetails table th,
+.ProjectDetails table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.ProjectDetails table th {
+  background-color: #007bff; 
+  
+}
+
+.ProjectDetails table td:first-child {
+  font-weight: bold;
+}
+
+/* Global styles */
+.Employees-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 180px;
+  width: 300px;
+  padding: 280px;
+  height: 100%;
+ 
+  
+  padding-top: 193.5px;
+  padding-bottom: 180px;
+ 
+  background-color: #ffffff; /* Change background color to white */
+  border-radius: 10px; /* Increase border-radius for smoother edges */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Increase box shadow for depth */
+  background-image: url("https://img1.wsimg.com/isteam/ip/08945638-42b1-40ec-83f6-9fbe45ef4360/Depositphotos_102535104_XL.jpg/:/cr=t:12.51%25,l:0%25,w:100%25,h:74.99%25/rs=w:1240,h:620,cg:true");
+  background-size: cover;
+  background-repeat: no-repeat;
+ 
+  
+}
+
+.menu-itemz,
+.submenu-itemz {
+  cursor: pointer;
+  margin: 10px;
+  padding: 12px 24px;
+  border-radius: 6px;
+  background-color: #db450e;
+  width:400px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.menu-itemz:hover,
+.submenu-itemz:hover {
+  background-color: #0d2f75;
+}
+
+.menu-itemz i,
+.submenu-itemz i {
+  margin-right: 10px;
+}
+
+.container {
+  width: 300px;
+  margin: 20px;
+}
+
+.submenu-itemz {
+  margin-top: 5px;
+}
+
+.EmployeeDetails,
+.Timesheet {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* EmployeeDetails.js */
+.EmployeeDetails-container {
+  display: center;
+  flex-direction: center;
+  align-items: center;
+  padding: 20px;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.8); 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  margin-top: 20px;
+  width: 650px;
+  margin-left: 100px;
+  
+  
+}
+
+.EmployeeDetails-container form table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.EmployeeDetails-container form input[type="text"],
+.EmployeeDetails-container form input[type="number"] {
+  width: calc(100% - 16px); 
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.EmployeeDetails-container form button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.EmployeeDetails-container form button[type="submit"]:hover {
+  background-color: #0056b3; 
+}
+
+.EmployeeDetails-container table {
+  width: 100%;
+}
+
+.EmployeeDetails-container table th,
+.EmployeeDetails-container table td {
+  padding: 10px;
+  text-align: left;
+}
+
+.EmployeeDetails-container table th {
+  background-color: #007bff; 
+  color: #fff; 
+}
+
+.EmployeeDetails-container table td {
+  border-bottom: 1px solid #ccc;
+}
+
+.EmployeeDetails-container .menu-item,
+.EmployeeDetails-container .submenu-item {
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px 20px;
+  border: 2px solid #007bff; 
+  border-radius: 5px;
+  background-color: #fff; 
+  color: #007bff; 
+  transition: all 0.3s ease;
+}
+
+.EmployeeDetails-container .menu-item:hover,
+.EmployeeDetails-container .submenu-item:hover {
+  background-color: #007bff; 
+  color: #fff; 
+}
+/* AdditionalDetails.css */
+
+.AdditionalDetails-container {
+  width: 100%px;
+  margin: auto;
+  padding: 20px;
+  
+}
+
+.AdditionalDetails-container h4 {
+  margin-bottom: 10px;
+}
+
+.AdditionalDetails-container table {
+  width: 90%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.AdditionalDetails-container table td,
+.AdditionalDetails-container table th {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.AdditionalDetails-container table input,
+.AdditionalDetails-container table textarea,
+.AdditionalDetails-container table select,
+.AdditionalDetails-container table button {
+  width: calc(100% - 16px); /* Adjusting for padding */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+.AdditionalDetails-container table button {
+  width: auto;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+
+
+.AdditionalDetails-container table button:hover {
+  background-color: #0056b3;
+}
+
+.AdditionalDetails-container table select {
+  padding: 8px;
+}
+
+.AdditionalDetails-container table textarea {
+  resize: vertical;
+}
+
+.AdditionalDetails-container table input[type="date"]::-webkit-inner-spin-button,
+.AdditionalDetails-container table input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+/* Add this to your CSS file */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position the tooltip above the text */
+  left: 50%;
+  margin-left: -60px; /* Center the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.AdditionalDetails-container table input[type="date"] {
+  padding: 8px;
+}
+
+.OnBenchEmployees-container {
+  margin-top: 20px;
+  width: 80%;
+  background-color: rgba(245, 245, 245, 0.627);
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  
+}
+
+.EmployeeList {
+  margin-top: 20px;
+}
+
+.EmployeeList table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.EmployeeList table th,
+.EmployeeList table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.EmployeeList table th {
+  background-color: #f0f0f0;
+  text-align: left;
+}
+
+.EmployeeList table td {
+  text-align: center;
+}
+
+.EmployeeList table button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: -60px; /* Reduced margin for space between buttons */
+}
+
+.EmployeeList table button:hover {
+  background-color: #060f41;
+}
+
+.SelectedEmployeeDetails {
+  margin-top: 20px;
+}
+
+.SelectedEmployeeDetails h4 {
+  margin-bottom: 10px;
+}
+
+.SelectedEmployeeDetails table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.SelectedEmployeeDetails table td,
+.SelectedEmployeeDetails table th {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.SelectedEmployeeDetails table th {
+  background-color: #f0f0f0;
+  text-align: left;
+}
+
+
+/*Timesheet*/
+
+.Timesheetcontainer {
+  background-color: rgba(255, 255, 255, 0.8); 
+  border: 2px solid #007bff5a; 
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  width: 100%;
+  max-width: 1000px;
+}
+
+.Timesheetcontainer h4 {
+  margin-bottom: 10px;
+}
+
+.Timesheetcontainer table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.Timesheetcontainer input[type="text"],
+.Timesheetcontainer input[type="number"],
+.Timesheetcontainer select,
+.Timesheetcontainer textarea,
+.Timesheetcontainer button {
+  width: calc(100% - 16px); 
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.Timesheetcontainer button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff; 
+  color: #fff; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Timesheetcontainer button[type="submit"]:hover {
+  background-color: #0056b3; 
+}
+
+.EmployeeDetailsForm {
+  background-color: rgba(255, 255, 255, 0.8); 
+  border: 2px solid #007bff5a; 
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  width: 600px;
+}
+
+.EmployeeDetailsForm h4 {
+  margin-bottom: 10px;
+}
+
+.EmployeeDetailsForm table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.EmployeeDetailsForm td,
+.EmployeeDetailsForm th {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.EmployeeDetailsForm button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff; 
+  color: #fff; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.EmployeeDetailsForm button:hover {
+  background-color: #0056b3; 
+}
+
+.vendor-container {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #060f41;
+  background-color: #faf8f8;
+  margin-top: 60px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.vendor-container h2 {
+  color: #060f41;
+  margin-bottom: 20px;
+}
+
+.vendor-container form {
+  margin-bottom: 20px;
+}
+
+.vendor-container .form-row {
+  margin-bottom: 10px;
+}
+
+.vendor-container label {
+  display: block;
+  font-weight: bold;
+}
+
+.vendor-container input[type="text"],
+.vendor-container input[type="number"],
+.vendor-container input[type="email"],
+.vendor-container input[type="tel"],
+.vendor-container select {
+  width: calc(200px - -180px); /* Adjusting for padding */
+  padding: 8px;
+  margin-right: -160px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+.vendor-container select {
+  padding: 8px;
+}
+
+.vendor-container input[type="date"]::-webkit-inner-spin-button,
+.vendor-container input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+.vendor-container button[type="button"],
+.vendor-container button[type="submit"] {
+  padding: 8px 12px;
+  background-color: #060f41;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.vendor-container button[type="button"]:hover,
+.vendor-container button[type="submit"]:hover {
+  background-color: #3a3a3a;
+}
+
+.vendor-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.vendor-container table th,
+.vendor-container table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.vendor-container table th {
+  background-color: #060f41;
+  color: #fff;
+}
+
+.vendor-container table td:first-child {
+  cursor: pointer;
+}
+
+.vendor-container table button {
+  padding: 6px 10px;
+  background-color: #ff4d4f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.vendor-container table button:hover {
+  background-color: #ff7875;
+}
+
+.employee-details {
+  margin-top: 20px;
+}
+
+.employee-details h2 {
+  color: #060f41;
+  margin-bottom: 10px;
+}
+
+.employee-details table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-details table td:first-child {
+  width: 30%;
+  font-weight: bold;
+}
+
+.employee-details table td {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #060f41;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.additionalss-input {
+  margin-bottom: 5px;
+}
+
+.attachmentss-container {
+  display: flex;
+  align-items: center;
+}
+
+.remove-button {
+  margin-left: 20px;
+  background: none;
+  
+  cursor: pointer;
+}
+.add-more-buttonvvv {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  
+
+  
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.add-more-buttovvv:hover {
+   /* Darker green */
+  transform: scale(1.05);
+}
+
+.add-more-buttonvvv:active {
+   /* Even darker green */
+  transform: scale(1);
+}
+/* Home.css */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.home-title {
+  font-size: 3rem;
+  color: #007bff; 
+  margin-bottom: 20px;
+}
+
+.home-content {
+  font-size: 1.5rem;
+  color: #444; 
+  text-align: center;
+  max-width: 80%;
+}
+
+
+
+/* Profile code */
+/* App.css */
+
+.profile-container {
+  width: 90%;
+  margin: 35px 35px auto;
+  padding: 20px;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  color: #000;
+  background-color: #f2f2f2;
+ 
+}
+
+.profile-container h2 {
+  color: #3498db;
+  margin-bottom: 10px;
+}
+
+.profile-container p {
+  margin-bottom: 5px;
+}
+
+.profile-container input[type="text"],
+.profile-container input[type="password"] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.profile-container button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db; 
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.profile-container button:hover {
+  background-color: #2980b9; 
+}
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.signup-container {
+  border-radius: 5px;
+  background-color: #3d6178ec;
+  padding: 20px 0 0 20px;
+ bottom: 60px;
+ color: #e2eaf0;
+  width: 100%;
+  margin: 0 auto; /* Center the container horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Full-width input fields */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+
+
+/* Float cancel and signup buttons and add equal width */
+.signupbtn {
+  float: left;
+  width: calc(50% - 5px); /* Subtract 5px for the gap between buttons */
+}
+
+.cancelbtn {
+  float: left;
+  width: calc(50% - 5px); /* Subtract 5px for the gap between buttons */
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 20px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+    float: none; /* Remove float on extra small screens */
+    margin-bottom: 10px; /* Add some space between buttons on small screens */
+  }
+}
+
+.ActiveEmployees-container {
+  background-color: rgba(255, 255, 255, 0.632);
+  justify-content: center;
+  width: 80%;
+}
+  
+.ActiveEmployees {
+  font-family: Arial, sans-serif;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.ActiveEmployees h4 {
+  margin-bottom: 10px;
+}
+
+.ActiveEmployees table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ActiveEmployees table th,
+.ActiveEmployees table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.ActiveEmployees table th {
+  background-color: #f0f0f0;
+  text-align: left;
+}
+
+.ActiveEmployees table td {
+  text-align: center;
+}
+
+.ActiveEmployees table button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.ActiveEmployees table button:hover {
+  background-color: #060f41;
+}
+
+.SelectedEmployeeDetails {
+  margin-top: 20px;
+}
+
+.SelectedEmployeeDetails h4 {
+  margin-bottom: 10px;
+}
+
+.SelectedEmployeeDetails table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.SelectedEmployeeDetails table td,
+.SelectedEmployeeDetails table th {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.SelectedEmployeeDetails table th {
+  background-color: #f0f0f0;
+  text-align: left;
+}
+/* Add a black background color to the top navigation */
+/* First Page CSS Styling Root Variables for Theming */
+:root {
+  --primary-bg-color: #1b425a;
+  --secondary-bg-color: #7eb5d7;
+  --text-color: #333;
+  --light-text-color: #fff;
+  --font-size-large: 2.5em;
+  --font-size-medium: 1.2em;
+  --transition-speed: 0.3s;
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  color: var(--text-color);
+}
+
+/* Top Navigation for First Page Screen */
+.topnav {
+  background-color: var(--primary-bg-color);
+  overflow: hidden;
+  width: 100%;
+  margin-top: -20px;
+  position: absolute;
+  top: 20px;
+  color: var(--light-text-color);
+  border: none;
+  padding: 6px 5px;
+  cursor: pointer;
+  
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: var(--light-text-color);
+  text-align: center;
+  padding: 14px 30px;
+  text-decoration: none;
+  font-size: 17px;
+  /*border-radius: 50%;*/
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+ /* color: var(--text-color);*/
+ color:#333;
+}
+
+/* Add a color to the active/current link */
+
+
+/* Logo Styling */
+.topnav img.logos {
+  max-height: 50px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  float: left; /* Align image to the left */
+  margin-right: 25px;
+  margin-left: 10px;
+}
+
+/* Welcome Text */
+.welcome-text {
+  text-align: center;
+  color: var(--text-color);
+  margin-top: 80px;
+  padding: 20px;
+  background: linear-gradient(135deg, #10384ffa 25%, #ffffff 100%);
+  border-radius: 15px;
+  box-shadow: var(--box-shadow);
+}
+
+.welcome-text h1 {
+  font-size: var(--font-size-large);
+  margin-bottom: 20px;
+  color: var(--secondary-bg-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Main and Dots Section */
+.Main, .Dots {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+/* Main Section Styling */
+.Main {
+  background: linear-gradient(135deg, var(--primary-bg-color) 25%, #69a7ee 100%);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+.Main p {
+  color: var(--light-text-color);
+  font-size: var(--font-size-medium);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Dots Section Styling */
+.Dots {
+  background-color: var(--primary-bg-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+.Dots p {
+  font-size: var(--font-size-medium);
+  line-height: 1.6;
+  color: var(--light-text-color);
+  margin: 0;
+  padding: 10px;
+  border: 1px solid var(--light-text-color);
+  background-color: var(--primary-bg-color);
+  border-radius: 10px;
+  transition: background-color var(--transition-speed);
+}
+
+.Dots p:hover {
+  background-color: var(--secondary-bg-color);
+  color: var(--text-color);
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .welcome-text {
+    margin-top: 50px;
+    padding: 10px;
+  }
+
+  .Main, .Dots {
+    padding: 10px;
+  }
+
+  .Main p, .Dots p {
+    font-size: 1em;
+  }
+}
+/* Define keyframes for the logo pulsing animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Define keyframes for sliding in navigation links */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Define keyframes for the staggered fade-in effect */
+@keyframes staggeredFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animations */
+.logos {
+  animation: pulse 2s infinite;
+}
+
+.topnav a {
+  animation: slideIn 0.5s ease-in-out forwards;
+  opacity: 0;
+}
+
+.topnav a:nth-child(1) { animation-delay: 0.2s; }
+.topnav a:nth-child(2) { animation-delay: 0.3s; }
+.topnav a:nth-child(3) { animation-delay: 0.4s; }
+.topnav a:nth-child(4) { animation-delay: 0.5s; }
+.topnav a:nth-child(5) { animation-delay: 0.6s; }
+.topnav a:nth-child(6) { animation-delay: 0.7s; }
+
+.welcome-text h1 {
+  animation: staggeredFadeIn 1s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 1s;
+}
+
+.welcome-text .Main, .welcome-text .Dots, .welcome-text p {
+  animation: staggeredFadeIn 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+.welcome-text .Main { animation-delay: 1s; }
+.welcome-text .Dots { animation-delay: 1.5s; }
+.welcome-text p:last-of-type { animation-delay: 2s; }
+
+
+.FirstContainer {
+  display: flex;
+  flex-direction: row; /* Arrange items in a row */
+  justify-content: space-between; /* Space items evenly */
+  align-items: flex-start; /* Align items to the top */
+  flex-wrap: wrap; /* Allow wrapping to multiple lines if necessary */
+}
+
+.card-body {
+  margin: 10px; /* Space between each card */
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  width: 100%; /* Take full width within its flex container */
+  max-width: 300px; /* Limit the maximum width of the cards */
+  text-align: center; /* Center the text and content inside the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the cards */
+}
+
+.card-body img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0; /* Optional: Round the top corners of the image */
+}
+
+.card-body ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 10px 0 0; /* Space between the image and the link */
+}
+
+.card-body ul a {
+  text-decoration: none;
+  color: #0056b3; /* Link color */
+  font-weight: bold;
+}
+
+.card-body ul a:hover {
+  color: #ff6347; /* Change link color on hover */
+}
+.card-contents {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card-section {
+  flex: 1;
+  min-width: 210px; /* Adjust minimum width as needed */
+  max-width: 300px; /* Adjust maximum width as needed */
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.card-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.card-section h3 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.card-section p, .card-section a {
+  margin-bottom: 5px;
+  color: #000;
+  text-decoration: none;
+}
+
+.card-section a:hover {
+  text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .card-contents {
+    flex-direction: column;
+  }
+}
+
+
+
+/* About Page CSS Stylings*/
+.About {
+  font-family: Arial, sans-serif;
+  width: 1078px;
+  padding: 20px;
+  border: 1px solid #f5eded;
+  border-radius: 5px;
+  background-color: #3d6178ec;
+  
+  
+}
+
+.About img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.About .card-About {
+  padding: 20px;
+  
+}
+
+.About .card-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+  
+}
+
+.About p {
+  font-size: 16px;
+  line-height: 1.5;
+  
+
+  
+}
+
+/* Terminated List CSS Stylings*/
+.Terminated-container {
+  background-color: rgba(255, 255, 255, 0.632);
+  justify-content: center;
+  width: 80%;
+
+}
+  
+.Terminated {
+  font-family: Arial, sans-serif;
+  width: 80%;
+  margin: 0 auto;
+ 
+}
+
+.Terminated h4 {
+  margin-bottom: 10px;
+}
+
+.Terminated table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.Terminated table th,
+.Terminated table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.Terminated table th {
+  background-color: #f0f0f0;
+  text-align: left;
+}
+
+.Terminated table td {
+  text-align: center;
+}
+
+.Terminated table button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.Terminated table button:hover {
+  background-color: #060f41;
+}
+
+.SelectedEmployeeDetails {
+  margin-top: 20px;
+}
+
+.SelectedEmployeeDetails h4 {
+  margin-bottom: 10px;
+}
+
+.SelectedEmployeeDetails table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.SelectedEmployeeDetails table td,
+.SelectedEmployeeDetails table th {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.SelectedEmployeeDetails table th {
+  background-color: #f0f0f0;
+  text-align: left;
+}
+/* Style the label */
+/* Style the label */
+label[for="upload"] {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #adaaaa;
+  color: rgb(10, 9, 9);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border:1px solid #000;
+}
+
+/* Hover effect */
+label[for="upload"]:hover {
+  background-color: #c7c1c1;
+  
+   /* Darker shade of red */
+}
+
+/* Hide the input */
+input[type="file"]#upload {
+  display: none;
+}
+/* InaActiveClients List CSS Stylings*/
+.InActiveClients-container {
+  margin: 20px;
+}
+
+.InActiveClients-container h4 {
+  margin-bottom: 10px;
+}
+
+.InActiveClients-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.InActiveClients-container th, .InActiveClients-container td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.InActiveClients-container th {
+  background-color: #f2f2f2;
+}
+
+.InActiveClients-container tr:hover {
+  background-color: #f2f2f2;
+}
+
+.InActiveClients-container td button {
+  margin-right: 5px;
+}
+
+/* Rounded switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/* ActiveClients List CSS Stylings*/
+.ActiveClients-container {
+  margin: 20px;
+}
+
+.ActiveClients-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.ActiveClients-container th, .ActiveClients-container td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.ActiveClients-container th {
+  background-color: #f2f2f2;
+}
+
+.ActiveClients-container tr:hover {
+  background-color: #f2f2f2;
+}
+
+.ActiveClients-container td button {
+  margin-right: 5px;
+}
+
+/* Rounded switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Contact Page CSS Stylings */
+.containerrr {
+  
+  color: black;
+  justify-items: center;
+  border: 1px solid #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  background-color:#3d6178ec;
+  width: 100%;
+}
+
+.section-heading {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: rgb(22, 43, 22); /* Set color for section headings */
+}
+
+.location {
+  padding-bottom: 20px;
+  color:#eceff4;
+}
+
+.location h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.location p {
+  margin-bottom: 10px;
+}
+
+.contact-form {
+  margin-bottom: 80px; /* Adjust margin for vertical spacing */
+}
+
+.contact-form label {
+  display: center;
+  margin-bottom: 10px;
+}
+
+.contact-form input[type="text"],
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #45a049;
+}
+
+.buttonz-container button {
+  width: 25%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #1dc878;
+  color: #fff;
+  border: 1px solid white;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.buttonz-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Venodr List CSS Stylings */
+
+.vendor-list-container {
+  margin-bottom: 20px;
+}
+
+.vendor-list-container h3 {
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.selected-employee-details {
+  margin-top: 20px;
+}
+
+.selected-employee-details h4 {
+  margin-bottom: 10px;
+}
+
+.selected-employee-details table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.selected-employee-details th, .selected-employee-details td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.selected-employee-details th {
+  background-color: #f2f2f2;
+}
+
+/* Timesheet CSS Stylings */
+.period-input {
+  display: flex;
+  align-items: center;
+}
+
+.separator {
+  margin: 0 5px;
+}
+
+.frequency-input {
+  
+  width: 150px;
+}
+
+.hourly-description,
+.day-description,
+.weekly-description {
+  margin-top: 10px;
+  
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 5px;
+}
+
+.day {
+  border: 1px solid #ccc;
+  padding: 5px;
+  
+}
+
+.day-name {
+  font-weight: bold;
+  
+}
+
+.date {
+  font-size: 0.8em;
+  
+}
+
+
+.hourly-description {
+  margin-top: 10px;
+  
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 5px;
+  
+  
+}
+
+.day {
+  border: 1px solid #ccc;
+  padding: 5px;
+  
+}
+
+.day-name {
+  font-weight: bold;
+}
+
+.date {
+  font-size: 0.8em;
+}
+
+.hourly-description input[type="text"] {
+  width: 60px;
+  
+}
+
+.week-description {
+  grid-column: span 7; /* Span across 7 days */
+}
+
+.week-description textarea {
+  margin-top: 10px; /* Add space between weeks */
+  width: 100%; /* Make the textarea full width */
+ 
+}
+/* Define styles for weekends */
+.weekend {
+  background-color: #d52a2a; /* Light gray background */
+  font-weight: bold; /* Make text bold */
+  
+}
+
+/* Define styles for Sundays */
+.weekend.sunday {
+  color: red; /* Make text red */
+}
+
+/* Define styles for Saturdays */
+.weekend.saturday {
+  color: rgb(16, 16, 174); /* Make text blue */
+}
+
+/* App.css */
+
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h4 {
+  margin-bottom: 20px;
+}
+
+/* Search tags */
+.Searchtags {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1%; /* Decreased the grid gap */
+  background-color: #f5f5f5;
+  padding: 15px; /* Decreased the padding */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.Searchtags label {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+}
+
+.Searchtags label span {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.Searchtags input[type="text"],
+.Searchtags select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+  
+}
+
+.Searchtags input[type="text"]:focus,
+.Searchtags select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+.period-input {
+  display: flex; /* Change to flex display */
+  align-items: center; /* Align items vertically center */
+}
+
+.period-input select {
+  margin-right: 10px; /* Add some right margin between the select and input */
+}
+
+.period-input input[type="text"] {
+  width: 80px;
+}
+/* Timesheet table */
+table {
+  width: 95%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: 25px;
+}
+
+th, td {
+  padding: 12px; /* Equal padding for all cells */
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Optional: set widths for columns to ensure uniformity */
+th:nth-child(1), td:nth-child(1) {
+  width: 30%; /* Adjust as needed */
+}
+
+th:nth-child(2), td:nth-child(2) {
+  width: 20%; /* Adjust as needed */
+}
+
+th:nth-child(3), td:nth-child(3) {
+  width: 15%; /* Adjust as needed */
+}
+
+th:nth-child(4), td:nth-child(4) {
+  width: 15%; /* Adjust as needed */
+}
+
+th:nth-child(5), td:nth-child(5) {
+  width: 20%; /* Adjust as needed */
+}
+
+th, td {
+
+  width: 60%;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+/* Employee details form */
+.EmployeeDetailsForm {
+  width: 80%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+  margin-left: 60px;
+}
+
+.Status-buttons {
+  margin-bottom: 20px;
+  width: 100px;
+
+}
+
+.Status-buttons h2 {
+  margin-bottom: 10px;
+}
+
+.Status-buttons button {
+  margin-right: 10px;
+}
+.btn-default{
+  margin-bottom: 20px;
+  width: 100px;
+
+}
+
+/* Modal */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.modal textarea {
+  width: 100%;
+  height: 100px;
+  resize: none;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.modal button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background-color: #0056b3;
+}
+
+.day {
+  padding: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.day.disabled {
+  background-color: #f0f0f0;
+  color: #999;
+}
+
+.day.isWeekend {
+  background-color: #f7f7f7;
+  color: #cc0000;
+}
+
+
+/* invoice CSS stylings*/
+
+.invoice-Detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: #f5f5f5; /* Light gray background for the entire form area */
+}
+
+.invoice-forms {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-areas:
+    "billTo project productMaterials billToAddress invoiceNumber invoiceDate dueDate"
+    "service .. shipTo description quantity billingRate amount"
+    "subTotal tax discount totalAmount attachments-invoice .. .."
+    "note note note note note note note"
+    "button button button button button button button";
+  grid-gap: 20px; /* Increase the grid gap */
+  max-width: 100%;
+  width: 100%;
+  background-color: #ffffff; /* White background for the form */
+  padding: 20px; /* Increase the padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the form */
+  border-radius: 8px; /* Rounded corners for the form */
+}
+
+.invoice-forms label {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9; /* Slightly off-white background for labels */
+  padding: 20px; /* Increase the padding */
+  border-radius: 8px; /* Rounded corners for labels */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for labels */
+  min-width: 100px; /* Set a minimum width for labels */
+}
+
+.invoice-forms label span {
+  margin-bottom: 16px; /* Increase the margin bottom */
+  font-weight: bold;
+  color: #333; /* Dark gray color for the text */
+}
+
+.invoice-forms input,
+.invoice-forms select {
+  padding: 12px; /* Increase the padding */
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Rounded corners for inputs */
+  transition: border-color 0.3s; /* Smooth transition for border color */
+  width: calc(100% - 24px); /* Adjust the width of inputs */
+}
+
+.invoice-forms input:focus,
+.invoice-forms select:focus {
+  border-color: #007bff; /* Blue border on focus */
+  outline: none; /* Remove default outline */
+}
+
+.invoice-forms button {
+  grid-area: button;
+  padding: 15px 30px; /* Increase the padding */
+  background-color: #007bff; /* Blue background for button */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Rounded corners for button */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.invoice-forms button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+
+/* Define grid areas */
+.billTo { grid-area: billTo; }
+.billToAddress { grid-area: billToAddress;}
+.shipTo { grid-area: shipTo; }
+.invoiceNumber { grid-area: invoiceNumber; }
+.invoiceDate { grid-area: invoiceDate; }
+.dueDate { grid-area: dueDate; }
+.paymentTerms { grid-area: paymentTerms; }
+.quantity { grid-area: quantity; }
+.billingRate { grid-area: billingRate; }
+.description { grid-area: description; }
+.productMaterials { grid-area: productMaterials; }
+.billingPeriod { grid-area: billingPeriod; }
+.startDate { grid-area: startDate; }
+.endDate { grid-area: endDate; }
+.service { grid-area: service;}
+.note { grid-area: note; }
+.tax { grid-area: tax;}
+.discount {grid-area: discount;}
+.project { grid-area: project;}
+.amount { grid-area: amount;}
+.subTotal { grid-area: subTotal;}
+.totalAmount { grid-area: totalAmount;}
+.attachments-invoice { grid-area: attachments-invoice;}
+
+.service {
+  grid-area: service;
+  display: flex;
+  align-items: center;
+  background: cover; /* Align items vertically */
+}
+
+.service .dateInputs {
+  display: flex;
+  align-items: center;
+  margin-left: 140px; /* Align items vertically */
+}
+
+.service .dateInputs .startDate,
+.service .dateInputs .endDate {
+  margin-right: 5px; /* Add margin between the date inputs */
+}
+
+.service .dateInputs .endDate {
+  margin-right: 0; /* Remove margin from the last input */
+}
+ 
+
+
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --bg-color: #f8f9fa;
+  --border-color: #ddd;
+  --font-color: #000;
+  --button-hover-color: #0056b3;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+.ProductDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.form-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.form-selector button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.form-selector button:hover {
+  background-color: var(--button-hover-color);
+}
+
+.forms-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 700px;
+  
+  margin-right: -40px;
+  padding: 20px;
+  
+}
+
+.form-section {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  box-shadow: 0 0 10px var(--shadow-color);
+  background-color: white;
+  color: var(--font-color);
+}
+
+h4, h5 {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  color: var(--font-color);
+}
+
+table td {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+}
+
+table thead th {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--button-hover-color);
+}
+
+.List {
+  width: 100%;
+}
+
+.List table {
+  width: 100%;
+}
+
+.List table td, .List table th {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.List table thead th {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+}
+
+.List table td {
+  cursor: pointer;
+}
+
+.List button {
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.List button:hover {
+  background-color: var(--button-hover-color);
+}
+
+@media (max-width: 768px) {
+  .form-selector {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .forms-container {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+  }
+
+  .form-section {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Payment.css Stylings */
+
+.payment-details {
+  background-color: #ffffff;
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 900px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.payment-details h4 {
+  text-align: center;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+.payment-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.payment-inputs div {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-inputs label {
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 5px;
+}
+
+.payment-inputs input,
+.payment-inputs select,
+.payment-inputs .react-datepicker-wrapper {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  width: 100%;
+  background-color: #f9fafb;
+  transition: border-color 0.3s;
+}
+
+.payment-inputs input:focus,
+.payment-inputs select:focus,
+.payment-inputs .react-datepicker-wrapper input:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed; /* Ensure equal column widths */
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  border: 1px solid #e5e7eb;
+  padding: 12px;
+  text-align: left;
+  width: 16.66%; /* Each column takes up 1/6 of the table width */
+}
+
+table th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+  color: #374151;
+}
+
+table td {
+  color: #4b5563;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+table tr:hover {
+  background-color: #f1f5f9;
+}
+
+button {
+  padding: 12px 24px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.react-datepicker-wrapper,
+.react-datepicker__input-container,
+.react-datepicker__input-container input {
+  width: 100%;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #f9fafb;
+}
+
+span {
+  cursor: pointer;
+  color: #2563eb;
+}
+
+span:hover {
+  color: #1d4ed8;
+}
+
+
+/* Invoice List CSS Stylings*/
+
+.invoiceList-details {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #f9f9f9; /* Updated background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for better visual separation */
+}
+
+.invoiceList-details h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: red;}
+#News {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
+
+/* Added Invoice, project, contact and payment in ActiveClient-details both navigation and sub navigation codes*/
+:root {
+  --button-bg-color: #007bff;
+  --button-hover-bg-color: #0056b3;
+  --button-active-bg-color: #003d80;
+  --button-text-color: #fff;
+  --button-border-radius: 8px;
+  --transition-duration: 0.3s;
+  --shadow-color: rgba(0, 0, 0, 0.15);
+  --gap-size: 5px;
+}
+
+.navigation {
+  display: flex;
+  
+  justify-content: center; /* Center the buttons */
+  align-items: center;
+  gap: var(--gap-size);
+  margin: 10px auto 0 auto; /* Center the container and add top margin */
+  margin-left: 400px;
+  margin-right: -600px;
+  
+}
+
+.navigation button {
+  flex: 1; /* Each button takes equal space */
+  padding: 10px 20px; /* Add some padding */
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color var(--transition-duration) ease, transform var(--transition-duration) ease;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.navigation button:hover {
+  background-color: var(--button-hover-bg-color);
+  transform: translateY(-3px);
+}
+
+.navigation button:active {
+  background-color: var(--button-active-bg-color);
+  transform: translateY(0);
+}
+
+.navigation button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform var(--transition-duration) ease;
+  border-radius: 50%;
+}
+
+.navigation button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
+:root {
+  --nav-bg-color: #f0f0f0;
+  --button-bg-color: #4caf50;
+  --button-hover-bg-color: #45a049;
+  --button-text-color: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+  --spacing: 20px;
+  --transition-duration: 0.3s;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.sub-navigation {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 80px;
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  padding: var(--spacing);
+  background-color: var(--nav-bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px var(--shadow-color);
+  transition: background-color var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+}
+
+.sub-navigation:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.sub-navigation button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-duration) ease, transform var(--transition-duration) ease;
+  font-size: 16px;
+}
+
+.sub-navigation button:hover {
+  background-color: var(--button-hover-bg-color);
+  transform: scale(1.05);
+}
+
+.sub-navigation button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(72, 187, 120, 0.5);
+}
+
+/* InvoiceList Search Tages and circle chsck boxes*/
+.Searchtags {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Searchtags label {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.Searchtags input[type="text"],
+.Searchtags select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.Searchtags input[type="text"]:focus,
+.Searchtags select:focus {
+  border-color: #007bff;
+}
+
+.Searchtags .period-input {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.Searchtags .filter-checkboxes {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-top: 15px;
+  
+  
+}
+
+.Searchtags .filter-checkboxes label {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #555;
+  margin-right: -140px;
+  margin-left: 160px;
+}
+
+.Searchtags .filter-checkboxes input[type="radio"] {
+  margin-right: 120px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.Searchtags .filter-checkboxes input[type="radio"]:checked {
+  accent-color: #007bff;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.Searchtags {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .Searchtags {
+    padding: 15px;
+  }
+
+  .Searchtags .period-input {
+    grid-template-columns: 1fr;
+  }
+
+  .Searchtags .filter-checkboxes {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.icon-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 50px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above the icon */
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.icon-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+/* Custom properties for theming */
+:root {
+  --switch-width: 100px;
+  --switch-height: 34px;
+  --slider-bg-color: #ccc;
+  --slider-hover-bg-color: #ddd;
+  --slider-active-bg-color: #0d9ed7;
+  --slider-inactive-bg-color: #dddddd;
+  --slider-border-radius: 34px;
+  --slider-transition: 0.4s;
+  --text-color: #fff;
+  --text-font-size: 14px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: var(--switch-width);
+  height: var(--switch-height);
+  margin-top: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--slider-bg-color);
+  transition: var(--slider-transition);
+  border-radius: var(--slider-border-radius);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: calc(var(--switch-height) - 8px);
+  width: calc(var(--switch-height) - 8px);
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: var(--slider-transition);
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--slider-active-bg-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(calc(var(--switch-width) - var(--switch-height)));
+}
+
+.slider.round {
+  border-radius: var(--slider-border-radius);
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switch-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--text-font-size);
+  color: var(--text-color);
+  transition: opacity var(--slider-transition);
+  pointer-events: none; /* Ensure text doesn't interfere with switch interaction */
+}
+
+.active-text {
+  left: 20px;
+  opacity: 0;
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  color: #fff;
+}
+
+.inactive-text {
+  right: 20px;
+  opacity: 1;
+  position: absolute;
+  left: 35px;
+  top: 8px;
+  color: #000;
+  
+}
+
+input:checked ~ .active-text {
+  opacity: 1;
+}
+
+input:checked ~ .inactive-text {
+  opacity: 0;
+}
+
+/* Hover effects */
+.switch:hover .slider {
+  background-color: var(--slider-hover-bg-color);
+}
+
+input:checked:hover + .slider {
+  background-color: var(--slider-active-bg-color);
+}
+
+input:not(:checked):hover + .slider {
+  background-color: var(--slider-inactive-bg-color);
+}
+
+
+
+
+.inactives-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 20%;
+}
+
+.inactives-button:hover {
+  background-color: #45a049;
+}
+.actives-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 20%;
+}
+
+.actives-button:hover {
+  background-color: #45a049;
+}
+/* contact Page CSS Stylings */
+.containerrr {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+  background-color: #f8fcff;
+}
+
+/* Contact Form Styles */
+.contact-form {
+  width: 80%;
+  
+  border-radius: 8px;
+  
+  padding: 100px;
+  padding-top: 20px;
+  margin-top: 30px;
+}
+
+.contact-form h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.section-paragraph {
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.contact-form .form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.contact-form .form-row div {
+  flex: 1;
+  margin-right: 5px;
+}
+
+.form-row div:last-child {
+  margin-right: 0;
+}
+
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #0066cc;
+  background-color: #fff;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #0066cc;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #005bb5;
+}
+
+/* Locations Styles */
+.locations {
+  width: 35%;
+  background-color: #183b53;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(246, 242, 242, 0.1);
+  padding: 20px;
+  margin-top: 30px;
+  margin-right: 100px;
+  text-align: center;
+}
+
+.locations h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  border-bottom: 2px solid #fffcfc;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.location {
+  margin-bottom: 20px;
+  
+}
+
+.location h3 {
+  font-size: 20px;
+  color: #f76402b7;
+  margin-bottom: 10px;
+}
+
+.location p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.location a {
+  color: #f0f2f5;
+  text-decoration: none;
+}
+
+.location a:hover {
+  text-decoration: underline;
+}
+/* App.css */
+
+.a4-sheet {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  border: 4px solid #fff;
+  border-radius: 10px;
+}
+
+.content {
+  margin-top: 20px;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.column {
+  flex: 1;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: #0056b3;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Add this to your App.css or a specific CSS file for the Sales component */
+.SalesContainer {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  
+}
+
+
+
+.SalesContainer .menu {
+  display: flex;
+  justify-content: space-around; /* Evenly space the buttons */
+  background-color: #f8f8f8; /* Light background color */
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.SalesContainer .menu-items {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.SalesContainer .menu-items:hover {
+  background-color: #ddd; /* Change background on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.SalesContainer .menu-items i {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.SalesContainer .content {
+  margin-left: 0px;
+  padding: 20px;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  background-color: #fff; /* White background for content area */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+}
+
+.SalesContainer .content.hidden {
+  display: none; /* Hide content when not active */
+}
+
+
+/*Employee-pay and Tax and Deductions */
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.input-group.label-left {
+  flex-direction: row;
+}
+
+.input-group.allowances {
+  flex-wrap: wrap;
+}
+
+.input-group label {
+  min-width: 160px; /* Adjust as needed */
+  margin-right: 10px;
+}
+
+.input-group input,
+.input-group select {
+  margin-right: 10px;
+}
+
+
+.input-deduction {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.input-deduction.label-left {
+  flex-direction: row;
+}
+
+
+
+.input-deduction label {
+  min-width: 160px; /* Adjust as needed */
+  margin-right: 10px;
+}
+
+.input-deduction input,
+.input-eduction select {
+  margin-right: 10px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.input-group input[type="radio"] {
+  transform: scale(0.8);
+  margin-right: 0.5rem;
+}
+
+.input-group .radio-group {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.input-group .radio-group label {
+  margin-right: 1rem;
+}
+
+.sidenav {
+  height: 100vh;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #111111;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.item {
+  flex: 1 1 45%;
+  margin: 10px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+  
+  .item {
+    flex: 1 1 30%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 40px;
+  }
+  
+  .item {
+    flex: 1 1 22%;
+  }
+} 
+
+
+
+
+
+
+
+
