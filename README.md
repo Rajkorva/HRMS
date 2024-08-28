@@ -1,4 +1,4 @@
-# Welcome to the Project of HRMS with sales and Purhase Modules in React.
+# Welcome to the Project of HRMS with Product&Service, sales and Purhase Modules in React.
 # Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
